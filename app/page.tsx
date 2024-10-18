@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { CodeSnippet, codeSnippets, Language } from "@/data/codeSnippets";
 import { sarcasticRoasts } from "@/lib/utils";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 export default function TypingSpeedApp() {
   const [selectedLanguage, setSelectedLanguage] =
@@ -123,7 +124,14 @@ export default function TypingSpeedApp() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold">Check Speed</h1>
+      <div className="flex justify-between">
+        <h1 className="text-3xl font-bold">Check Speed</h1>
+        <RainbowButton>
+          <a href="https://github.com/21prnv/check-speed">
+            Give Star On Github
+          </a>
+        </RainbowButton>
+      </div>
       <h2 className="text-xl font-bold mb-4">Developer Typing Speed Checker</h2>
       <div className="mb-4 flex space-x-4">
         <Select onValueChange={handleLanguageChange} value={selectedLanguage}>
