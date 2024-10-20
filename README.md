@@ -3,7 +3,7 @@
 A Next.js-powered application designed to help developers improve their coding speed and accuracy.
 
 
-## 📌 Table of Contents
+## Table of Contents
 
 - [Features](#Features)
 - [Getting Started](#getting-started)
