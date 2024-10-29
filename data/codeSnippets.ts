@@ -620,5 +620,21 @@ int factorial(int n) {
 }`,
       estimatedTime: 30,
     },
+    {
+      title: "Check Prime Numberin C++",
+      code: `#include <iostream>
+
+int cnt = 0;
+for(int i=1; i*i<=n; i++){
+   if(n % i == 0){
+      cnt++;
+      if(n/i != i) cnt++;
+   }
+}
+return cnt == 2;`,
+      
+
+estimatedTime: 30,
+    },
   ],
 };
