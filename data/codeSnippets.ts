@@ -31,6 +31,28 @@ export const codeSnippets: Record<Language, CodeSnippet[]> = {
 }`,
       estimatedTime: 30,
     },
+    {
+      title: "Binary Search in JavaScript",
+      code: `function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid; 
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1; 
+}`,
+      estimatedTime: 60,
+    },
   ],
   python: [
     {
@@ -48,6 +70,25 @@ export const codeSnippets: Record<Language, CodeSnippet[]> = {
     {
       title: "List Comprehension",
       code: `squares = [x**2 for x in range(10) if x % 2 == 0]`,
+      estimatedTime: 20,
+    },
+    {
+      title: "Binary Search in Python",
+      code: `def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) 
+
+        if arr[mid] == target:
+            return mid  
+        elif arr[mid] < target:
+            left = mid + 1  
+        else:
+            right = mid - 1  
+
+    return -1`,
       estimatedTime: 20,
     },
   ],
@@ -88,6 +129,28 @@ List<Integer> evenSquares = numbers.stream()
     .map(n -> n * n)
     .collect(Collectors.toList());`,
       estimatedTime: 40,
+    },
+    {
+      title: "Binary Search in Java",
+      code: `public static int binarySearch(int[] arr, int target) {
+    int left = 0;
+    int right = arr.length - 1;
+
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}`,
+      estimatedTime: 60,
     },
   ],
   c: [
@@ -621,7 +684,7 @@ int factorial(int n) {
       estimatedTime: 30,
     },
     {
-      title: "Check Prime Numberin C++",
+      title: "Check Prime Number in C++",
       code: `#include <iostream>
 
 int cnt = 0;
